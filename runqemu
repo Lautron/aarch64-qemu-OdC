@@ -1,0 +1,9 @@
+[[ -z "$1" ]] && echo 'USAGE: runqemu DIR' && exit 1
+
+dir=$(readlink -f $1)
+if [[ -d $dir ]]; then
+  echo 'Opening QEMU...'
+  sudo docker run -v $dir:/~/home/qemu -ti lautronb/aarch64-qemu
+else
+  echo "INVALID DIRECTORY"
+fi
