@@ -6,4 +6,4 @@ curl https://raw.githubusercontent.com/Lautron/aarch64-qemu-OdC/master/runqemu -
 chmod +x runqemu
 echo ""
 echo "Copying runqemu to ~/.local/bin"
-cp runqemu ~/.local/bin
+mv runqemu ~/.local/bin
